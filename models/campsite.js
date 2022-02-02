@@ -16,11 +16,11 @@ const commentSchema = new Schema({
         required: true
     },
     author: {
-        type: String,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        required: 'User'
     }
 }, {
-    timpestamps: true
+    timestamps: true
 });
 
 const campsiteSchema = new Schema({
