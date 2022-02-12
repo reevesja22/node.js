@@ -39,7 +39,7 @@ exports.jwtPassport = passport.use(
     )
 );
 
-exports.facebookPassport = passport.use(
+/*exports.facebookPassport = passport.use(
     new FacebookTokenStrategy(
         {
             clientId: confi.facebook.clientId,
@@ -68,7 +68,7 @@ exports.facebookPassport = passport.use(
             });
         }
     )
-);
+); */
 
 //client sends a request
 

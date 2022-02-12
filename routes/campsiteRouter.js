@@ -166,7 +166,7 @@ campsiteRouter.route("/:campsiteId/comments/:commentId")
     })
     .catch(err => next(err)); 
 })
-.post(cors.corsWithOptions, authenticate.verifyUser, authenticate,verifyAdmin, (req, res, next) => {
+.post(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     res.statusCode = 403;
     res.end(`POST operation not supported on /campsites/${req.params.campsiteId}/comments/${req.params.commentId}`);
 })
